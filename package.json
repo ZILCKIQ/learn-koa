@@ -1,0 +1,23 @@
+{
+  "name": "webserver-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": " nodemon --experimental-modules app.js"
+  },
+  "keywords": [],
+  "author": "ZILCKIQ",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-sslify": "^4.0.3",
+    "koa-static": "^5.0.0",
+    "mongodb": "^3.3.2"
+  }
+}
