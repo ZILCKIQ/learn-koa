@@ -2,11 +2,11 @@
   "name": "webserver-koa",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": " node --experimental-modules app.js",
-    "run": " nodemon --experimental-modules app.js"
+    "test": " node --experimental-modules server.js",
+    "run": " nodemon --experimental-modules server.js"
   },
   "keywords": [],
   "author": "ZILCKIQ",
