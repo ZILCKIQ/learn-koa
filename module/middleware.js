@@ -5,7 +5,7 @@ import { SECRET, DB_URL, DB_NAME, COLLECTION_NAME } from '../config/config.js';
 const DB = new MongoDB(DB_URL, DB_NAME, COLLECTION_NAME);
 
 //token验证
-export async function Auth(ctx, next) {
+export async function tokenAuth(ctx, next) {
     try {
         const raw = String(ctx.request.headers.authorization).split(' ').pop();
         const tokenData = jwt.verify(raw, SECRET);

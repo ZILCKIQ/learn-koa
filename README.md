@@ -39,3 +39,9 @@ nodejs koa框架学习 使用ES6语法和nodejs实验性的ECMAScript Modules方
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
+
+
+命名习惯
+常量  A_B_C
+类    Abc
+变量/函数  aBc

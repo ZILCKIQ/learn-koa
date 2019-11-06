@@ -21,7 +21,7 @@ app
     .use(router.allowedMethods());
 
 router.get('/', async (ctx) => {
-    ctx.redirect('index.html');
+    ctx.body = { "msg": "Koa NodeJS Web Server" };
 });
 
 router

@@ -1,4 +1,5 @@
 import mongodb from 'mongodb';
+
 const MongoClient = mongodb.MongoClient;
 
 export default class MongoDB {
@@ -89,20 +90,20 @@ export default class MongoDB {
         }
     }
 
-    async findMany(query = {}, options = {}) {
+    async findOne(query, options = {}) {
         const document = await this.collection();
-        const result = document.find(query, options);
         try {
-            return await result.toArray();
+            return await document.findOne(query, options);
         } catch (error) {
             return error
         }
     }
 
-    async findOne(query, options = {}) {
+    async findMany(query = {}, options = {}) {
         const document = await this.collection();
+        const result = document.find(query, options);
         try {
-            return await document.findOne(query, options);
+            return await result.toArray();
         } catch (error) {
             return error
         }
@@ -144,15 +145,6 @@ export default class MongoDB {
         }
     }
 
-    async replaceOne(filter, doc, options = {}) {
-        const document = await this.collection();
-        try {
-            return await document.replaceOne(filter, doc, options);
-        } catch (error) {
-            return error
-        }
-    }
-
     async updateOne(filter, update, options = {}) {
         const document = await this.collection();
         try {
@@ -171,4 +163,12 @@ export default class MongoDB {
         }
     }
 
+    async replaceOne(filter, doc, options = {}) {
+        const document = await this.collection();
+        try {
+            return await document.replaceOne(filter, doc, options);
+        } catch (error) {
+            return error
+        }
+    }
 }
