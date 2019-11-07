@@ -17,17 +17,9 @@ body {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
 }
 
-.btn {
-    float: right;
-    width: 350px;
-    height: 420px;
-    box-sizing: border-box;
-    padding: 80px 40px;
-    background: rgba(255, 255, 255, .8);
-}
-
 .btn a {
-    text-decoration:none;
+    font-weight: initial;
+    text-decoration: none;
     text-align: center;
     display: block;
     margin-top: 20%;
@@ -55,7 +47,7 @@ body {
     height: 100%;
 }
 
-.loginBox {
+.btn, .loginBox {
     float: right;
     width: 350px;
     height: 420px;
