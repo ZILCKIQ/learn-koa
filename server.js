@@ -6,7 +6,7 @@ import sslify from 'koa-sslify';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
 import Static from 'koa-static';
-import users from './routers/users.js';
+import api from './routers/api.js';
 import { HTTP_PORT, HTTPS_PORT } from './config/config.js';
 
 const app = new Koa();
@@ -15,17 +15,13 @@ const SSLify = sslify.default;
 
 app
     .use(SSLify())
-    .use(Static('./public'))
+    .use(Static('./static'))
     .use(bodyParser())
     .use(router.routes())
     .use(router.allowedMethods());
 
-router.get('/', async (ctx) => {
-    ctx.body = { "msg": "Koa NodeJS Web Server" };
-});
-
 router
-    .use('/users', users);
+    .use('/api', api);
 
 const SSL = {
     key: fs.readFileSync('./ssl/harmonious.tech.key'),  //ssl文件路径

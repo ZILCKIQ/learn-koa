@@ -1,0 +1,124 @@
+body {
+    /* background: url(img/background.jpg); */
+    background: #212121;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 420px;
+    border-radius: 5px;
+    border: 10px solid rgba(255, 255, 255, .2);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
+}
+
+.btn {
+    float: right;
+    width: 350px;
+    height: 420px;
+    box-sizing: border-box;
+    padding: 80px 40px;
+    background: rgba(255, 255, 255, .8);
+}
+
+.btn a {
+    text-decoration:none;
+    text-align: center;
+    display: block;
+    margin-top: 20%;
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 30px;
+    background: #212121;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.imgBox {
+    width: 350px;
+    height: 420px;
+    overflow: hidden;
+    float: left;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.loginBox {
+    float: right;
+    width: 350px;
+    height: 420px;
+    box-sizing: border-box;
+    padding: 80px 40px;
+    background: rgba(255, 255, 255, .8);
+}
+
+h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #262626;
+}
+
+.loginBox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginBox input[type="text"], .loginBox input[type="password"] {
+    border: none;
+    /* border-bottom: 2px solid #262626; */
+    border-bottom: 2px solid #ed292a;
+    outline: none;
+    height: 40px;
+    color: #262626;
+    background: transparent;
+    font-size: 16px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.loginBox input[type="text"]:invalid, .loginBox input[type="password"]:invalid {
+    box-shadow: none;
+    border-bottom: 2px solid #801e1e;
+}
+
+.loginBox input[type="text"]:valid, .loginBox input[type="password"]:valid {
+    box-shadow: none;
+    border-bottom: 2px solid rgb(16, 102, 31);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, .5);
+}
+
+.inputBox {
+    position: relative;
+}
+
+.loginBox input[type="button"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: #212121;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.loginBox a {
+    color: #262626;
+    font-size: 14px;
+    font-weight: bold;
+}
