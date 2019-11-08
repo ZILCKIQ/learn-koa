@@ -29,6 +29,30 @@
         </div>
     </div>
 </body>
-<script src="js/main.js"></script>
+<script type="module">
+    import { send_req } from './js/main.js';
+    const btn_submit = document.getElementById('submit');
+
+    btn_submit.addEventListener('click', async () => {
+        const input_user = document.querySelector('.loginBox input[type = "text"]');
+        const input_passwd = document.querySelector('.loginBox input[type = "password"]');
+
+        if (input_user.validity.valid && input_passwd.validity.valid) {
+            const username = input_user.value;
+            const password = input_passwd.value;
+            btn_submit.type = 'hidden';
+            const res = await send_req('/api/register', {
+                method: 'POST',
+                body: JSON.stringify({ username, password }),
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            })
+            alert(res.msg);
+        } else {
+            alert("填写不规范，请检查后重新输入！");
+        }
+    });
+</script>
 
 </html>
