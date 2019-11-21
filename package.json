@@ -2,11 +2,11 @@
   "name": "webserver-koa",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
-    "test": " node --experimental-modules server.js",
-    "run": " nodemon --experimental-modules server.js"
+    "test": " node --experimental-modules main.js",
+    "daemon": " nodemon --experimental-modules main.js"
   },
   "keywords": [],
   "author": "ZILCKIQ",
@@ -14,11 +14,11 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.5.1",
-    "koa": "^2.8.1",
+    "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-sslify": "^4.0.3",
     "koa-static": "^5.0.0",
-    "mongodb": "^3.3.2"
+    "mongodb": "^3.3.4"
   }
 }
