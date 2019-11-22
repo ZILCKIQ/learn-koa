@@ -4,7 +4,6 @@
 nodejs koa框架学习 使用ES6语法
 
 #### 软件架构
-软件架构说明
 nodejs koa框架学习 使用ES6语法和nodejs实验性的ECMAScript Modules方式载入模块
 
 #### 使用说明
