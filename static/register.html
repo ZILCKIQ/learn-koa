@@ -40,7 +40,6 @@
         if (input_user.validity.valid && input_passwd.validity.valid) {
             const username = input_user.value;
             const password = input_passwd.value;
-            btn_submit.type = 'hidden';
             const res = await send_req('/api/register', {
                 method: 'POST',
                 body: JSON.stringify({ username, password }),
@@ -48,7 +47,8 @@
                     'Content-Type': 'application/json'
                 })
             })
-            alert(res.msg);
+            btn_submit.disabled = true;
+            alert(JSON.stringify(res));
         } else {
             alert("填写不规范，请检查后重新输入！");
         }

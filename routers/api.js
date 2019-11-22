@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 import MongoDB from '../module/MongoDrive.js';
 import { SECRET, DB_URL, DB_NAME, COLLECTION_NAME, } from '../config/config.js';
 import { tokenAuth } from '../module/middleware.js';
+import { userInfo } from 'os';
 
 const router = new Router();
 const DB = new MongoDB(DB_URL, DB_NAME, COLLECTION_NAME);
@@ -44,7 +45,8 @@ router.post('/login', async ctx => {
 
 //token验证
 router.get('/profile', tokenAuth, async ctx => {
-    ctx.body = ctx.req.userInfo;
+    const userInfo = await DB.findOne({ username: ctx.req.tokenData.username });
+    ctx.body = { "msg": userInfo };
 });
 
 export default router.routes();

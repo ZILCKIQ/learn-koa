@@ -1,6 +1,9 @@
 body {
     /* background: url(img/background.jpg); */
-    background: #212121;
+    /* background: #212121; */
+    background-image: url(../img/background.jpg);
+    /* background-repeat: repeat-y; */
+    background-attachment: fixed;
     background-size: cover;
     font-family: sans-serif;
 }
@@ -9,7 +12,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(20%, -50%);
     width: 700px;
     height: 420px;
     border-radius: 5px;
@@ -107,6 +110,11 @@ h3 {
     color: #fff;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.loginBox input[type="button"]:disabled {
+    color: #000;
+    cursor: not-allowed;
 }
 
 .loginBox a {
