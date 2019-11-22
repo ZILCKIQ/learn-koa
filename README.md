@@ -16,8 +16,8 @@ nodejs koa框架学习 使用ES6语法和nodejs实验性的ECMAScript Modules方
         let COLLECTION_NAME = "";  
   
         const SECRET = "";  
-        const HTTP_PORT = ;    
-        const HTTPS_PORT = ;    
+        const HTTP_PORT = ;  
+        const HTTPS_PORT = ;  
 
         export {  
             DB_URL,  
@@ -27,5 +27,5 @@ nodejs koa框架学习 使用ES6语法和nodejs实验性的ECMAScript Modules方
             HTTP_PORT,  
             HTTPS_PORT  
         }  
-2. npm install 
-3. npm test
+2.     npm install  
+3.     npm test  
